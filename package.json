@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "@shopify/eslint-plugin": "^42.0.2",
-    "@shopify/prettier-config": "^1.1.2",
     "@types/jest": "^29.2.4",
     "@types/node": "18.11.15",
     "aws-cdk": "2.57.0",
@@ -27,7 +26,21 @@
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
   },
-  "prettier": "@shopify/prettier-config",
+  "prettier": {
+    "$schema": "http://json.schemastore.org/prettierrc",
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 100,
+    "proseWrap": "always",
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
   "eslintConfig": {
     "extends": [
       "plugin:@shopify/node",
@@ -41,8 +54,12 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "roots": ["<rootDir>/test"],
-    "testMatch": ["**/*.test.ts"],
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "testMatch": [
+      "**/*.test.ts"
+    ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     }
